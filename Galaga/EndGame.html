@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Impressive</title>
+</head>
+<body>
+<h1>You Win!</h1>
+
+<div id="thatgoodtext"></div>
+<p>Congrats on your victory!! Want to play again?</p>
+
+<p>
+	<input type="button" id="PlayAgain" name="PlayAgain" value="PlayAgain" onclick="startGame()"/>
+	<input type="button" id="No" name="No" value="No" onclick="closeWin()"/>
+	<script>
+		var numberOfEnemiesKilled = localStorage.getItem("enemiesKilled");
+		document.getElementById("thatgoodtext").innerHTML = "Enemies Killed: "+numberOfEnemiesKilled;
+	</script>
+</p>
+<script>
+function startGame(){
+	window.location = "Galaga.html";
+}
+function closeWin() {
+    window.close();   // Closes the new window
+}
+</script>
+</body>
+</html>
